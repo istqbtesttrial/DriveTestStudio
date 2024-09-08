@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Button Styling */
+.menu-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    z-index: 1000;
+}
+
+.menu-btn__burger {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-12px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(12px);
+}
+
+/* Hover state for the hamburger icon */
+.menu-btn:hover .menu-btn__burger {
+    background-color: transparent;
+}
+
+.menu-btn:hover .menu-btn__burger::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.menu-btn:hover .menu-btn__burger::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+/* Hidden menu styling */
+.hidden {
+    display: none;  /* Completely hide the menu */
+}
+
+/* Visible menu styling */
+.visible {
+    display: block;   /* Make the menu visible */
+    opacity: 1;       /* Full opacity */
+    max-height: 300px; /* Set max height for smooth transition */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+/* Navbar menu container */
+#navbar-menu {
+    position: absolute;
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+/* Button styling with hover effects */
+.btn {
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.5s ease, border-width 0.5s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 105, 180, 1);
+    border-width: 4px;
+}
+
+/* Red-Green-Refactor Boxes Styling */
+.red-box, .green-box, .refactor-box {
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.red-box {
+    background-color: #e3342f;
+}
+
+.green-box {
+    background-color: #38c172;
+}
+
+.refactor-box {
+    background-color: #ffed4a;
+}
+
+/* Interactive code editor container */
+#editor-container {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#code-editor {
+    height: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Result styling */
+#result {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Quiz button styling */
+.quiz .btn {
+    background-color: #3490dc;
+    color: white;
+}
+
+.quiz .btn:hover {
+    background-color: #1d72b8;
+}

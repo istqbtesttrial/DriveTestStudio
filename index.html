@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-Driven Development Methodologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
+    <!-- 3-line Hamburger Menu Button -->
+    <div id="menu-button" class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+    <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
+        <li class="nav-item"><a class="nav-link text-white" href="#tdd">TDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#atdd">ATDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#bdd">BDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#shiftleft">Shift Left</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#mbt">MBT</a></li>
+    </ul>
+</nav>
+
+<!-- Optional SVG filter for the pixelation effect -->
+<svg>
+    <defs>
+        <filter id="pixelate" x="0" y="0">
+            <feFlood flood-color="#fff" result="bg" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" />
+        </filter>
+    </defs>
+</svg>
+
+<!-- Page Header -->
+<header class="jumbotron text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-16">
+    <h1 class="text-4xl font-bold">Welcome to Test-Driven Development Methodologies</h1>
+    <p class="text-lg mt-4">Explore concepts of TDD, ATDD, BDD, Shift Left, and Model-Based Testing</p>
+    <div class="mt-6">
+        <a href="#tdd" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Get Started</a>
+    </div>
+</header>
+
+<!-- TDD Section -->
+<section id="tdd" class="container mx-auto my-10 bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold">Test-Driven Development (TDD)</h2>
+    <p>A brief explanation of TDD and how it works...</p>
+    <div class="mt-4">
+        <a href="tdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Learn more</a>
+    </div>
+</section>
+
+<!-- ATDD Section -->
+<section id="atdd" class="container mx-auto my-10 bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold">Acceptance Test-Driven Development (ATDD)</h2>
+    <p>ATDD emphasizes collaboration between developers, testers, and stakeholders to write acceptance tests before development starts.</p>
+    <div class="mt-4">
+        <a href="atdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Learn more</a>
+    </div>
+</section>
+
+<!-- BDD Section -->
+<section id="bdd" class="container mx-auto my-10 bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold">Behavior-Driven Development (BDD)</h2>
+    <p>BDD focuses on defining system behavior through examples using a simple Given-When-Then format.</p>
+    <div class="mt-4">
+        <a href="bdd/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Learn more</a>
+    </div>
+</section>
+
+<!-- Shift Left Section -->
+<section id="shiftleft" class="container mx-auto my-10 bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold">Shift Left Testing</h2>
+    <p>Shift Left Testing involves moving testing earlier in the development process to detect and fix bugs sooner.</p>
+    <div class="mt-4">
+        <a href="shiftleft/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Learn more</a>
+    </div>
+</section>
+
+<!-- MBT Section -->
+<section id="mbt" class="container mx-auto my-10 bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold">Model-Based Testing (MBT)</h2>
+    <p>Model-Based Testing generates test cases from models that describe the expected behavior of the system.</p>
+    <div class="mt-4">
+        <a href="mbt/index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Learn more</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-4">
+    <p>Copyright © 2024 - Belhaj Ouajdi</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+<script src="scripts/scripts.js"></script>
+</body>
+</html>

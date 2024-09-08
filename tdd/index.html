@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-Driven Development (TDD)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
+    <!-- 3-line Hamburger Menu Button -->
+    <div id="menu-button" class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+    <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../tdd/index.html">TDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../atdd/index.html">ATDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../bdd/index.html">BDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../shiftleft/index.html">Shift Left</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../mbt/index.html">MBT</a></li>
+    </ul>
+</nav>
+
+<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-green-400 via-yellow-500 to-red-600 text-white py-12">
+    <h1 class="text-4xl font-bold">Test-Driven Development (TDD)</h1>
+    <p class="text-lg mt-4">Learn the Red-Green-Refactor process interactively</p>
+</header>
+
+<!-- Visual Explanation of Red-Green-Refactor -->
+<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Red-Green-Refactor Cycle</h2>
+    <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="red-box">
+            <h3 class="text-xl font-semibold">Red</h3>
+            <p>Write a failing test</p>
+        </div>
+        <div class="green-box">
+            <h3 class="text-xl font-semibold">Green</h3>
+            <p>Write code to pass the test</p>
+        </div>
+        <div class="refactor-box">
+            <h3 class="text-xl font-semibold">Refactor</h3>
+            <p>Refactor the code</p>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Code Editor -->
+<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Interactive TDD Example</h2>
+    <div id="editor-container" class="bg-gray-100 p-4 rounded-lg shadow-inner">
+        <pre id="code-editor"></pre>
+        <button id="run-code" class="btn bg-green-600 text-white px-4 py-2 mt-4">Run Test</button>
+        <div id="result" class="mt-4"></div>
+    </div>
+</section>
+
+<!-- Quiz Section -->
+<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Quiz: Test Your Knowledge</h2>
+    <div class="quiz">
+        <p>Which step involves improving code without changing behavior?</p>
+        <button id="answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Red</button>
+        <button id="answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Green</button>
+        <button id="answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Refactor</button>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+<script src="../scripts/tdd.js"></script>
+
+</body>
+</html>

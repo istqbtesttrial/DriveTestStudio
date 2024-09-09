@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceptance Test-Driven Development (ATDD)</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Le fichier de style global -->
+    <link rel="stylesheet" href="../css/styles-atdd.css"> <!-- Le fichier de style spécifique à ATDD -->
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -24,26 +25,31 @@
     </ul>
 </nav>
 
-<!-- Header Section -->
-<header class="jumbotron text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-12">
+<!-<!-- Header Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-12 relative">
     <h1 class="text-4xl font-bold">Acceptance Test-Driven Development (ATDD)</h1>
     <p class="text-lg mt-4">Collaborate with stakeholders to define acceptance criteria before development begins.</p>
 </header>
 
 <!-- ATDD Explanation Section -->
 <section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">What is ATDD?</h2>
-    <p>Acceptance Test-Driven Development (ATDD) focuses on writing acceptance tests through collaboration between developers, testers, and stakeholders before any development starts. These tests ensure that the final product meets the needs of the business.</p>
-</section>
+    <h2 class="text-2xl font-bold mb-6">Interactive ATDD Example: User Account Creation</h2>
+    <p>Ensure that users can create an account by providing a valid email, a secure password, and their name.</p>
 
-<!-- Interactive ATDD Example Section -->
-<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-6">Interactive ATDD Example</h2>
-    <div id="editor-container" class="bg-gray-100 p-4 rounded-lg shadow-inner">
-        <!-- Code Editor will be here -->
-        <div id="atdd-editor" style="height: 300px; width: 100%;"></div>
-        <button id="run-atdd-code" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">Run Acceptance Test</button>
-        <div id="atdd-result" class="mt-4"></div>
+    <!-- Account creation form -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+        <label for="email" class="block mb-2">Enter your email:</label>
+        <input id="email" type="email" class="p-2 border rounded mb-4 w-full" placeholder="user@example.com" />
+
+        <label for="password" class="block mb-2">Enter your password:</label>
+        <input id="password" type="password" class="p-2 border rounded mb-4 w-full" placeholder="Password123" />
+
+        <label for="name" class="block mb-2">Enter your name:</label>
+        <input id="name" type="text" class="p-2 border rounded mb-4 w-full" placeholder="John Doe" />
+
+        <button id="create-account" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">Create Account</button>
+
+        <div id="account-result" class="mt-4 text-xl font-bold"></div>
     </div>
 </section>
 
@@ -51,10 +57,11 @@
 <section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
     <h2 class="text-2xl font-bold mb-6">Quiz: Test Your Knowledge</h2>
     <div class="quiz">
-        <p>Who should be involved in writing acceptance tests in ATDD?</p>
-        <button id="answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Only Developers</button>
-        <button id="answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Only Testers</button>
-        <button id="answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Developers, Testers, and Stakeholders</button>
+        <p>Which field is mandatory when creating an account?</p>
+        <button id="quiz-answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Password</button>
+        <button id="quiz-answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Name</button>
+        <button id="quiz-answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">Email</button>
+        <button id="quiz-answer4" class="btn bg-blue-500 text-white px-4 py-2 mt-2">All of the above</button>
     </div>
 </section>
 
@@ -62,6 +69,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 <script src="../scripts/atdd.js"></script>
-
+<!-- Home Button -->
+<footer class="text-center py-6">
+    <a href="../index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
+        Home
+    </a>
+</footer>
 </body>
 </html>

@@ -6,60 +6,86 @@ gsap.from("header", {
     ease: "power2.out"
 });
 
-// Initialize the Ace Editor for ATDD example
-let atddEditor = ace.edit("atdd-editor");
-atddEditor.setTheme("ace/theme/monokai");
-atddEditor.session.setMode("ace/mode/javascript");
+// Interactive ATDD test for user account creation
+document.getElementById("create-account").addEventListener("click", function () {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let name = document.getElementById("name").value;
+    let resultContainer = document.getElementById("account-result");
 
-// Preload example ATDD scenario
-let atddExample =
-    `Scenario: Purchase a product online
-  Given a user is on the product page
-  When the user adds a product to the cart
-  And proceeds to checkout
-  Then the user should see the total price and confirm the purchase`;
+    // Simple validation
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
-// Set example scenario in the editor
-atddEditor.setValue(atddExample, 1);
-
-// Button references
-let runAtddButton = document.getElementById("run-atdd-code");
-
-// Run acceptance test
-runAtddButton.addEventListener("click", function () {
-    let scenario = atddEditor.getValue();  // Get the scenario from the editor
-    let resultContainer = document.getElementById("atdd-result");
-
-    try {
-        // Simulate test result (for now just a success message)
-        resultContainer.innerHTML = "<p class='text-green-600'>Acceptance Test Passed!</p>";
-    } catch (error) {
-        resultContainer.innerHTML = "<p class='text-red-600'>Test Failed: " + error.message + "</p>";
+    if (!emailRegex.test(email)) {
+        Swal.fire({
+            title: 'Invalid Email!',
+            text: 'Please enter a valid email address.',
+            icon: 'error'
+        });
+        resultContainer.textContent = "Email validation failed.";
+        return;
     }
-});
 
-// Quiz Section
-document.getElementById("answer1").addEventListener("click", function () {
+    if (!passwordRegex.test(password)) {
+        Swal.fire({
+            title: 'Invalid Password!',
+            text: 'Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, and one number.',
+            icon: 'error'
+        });
+        resultContainer.textContent = "Password validation failed.";
+        return;
+    }
+
+    if (name.trim() === "") {
+        Swal.fire({
+            title: 'Name Required!',
+            text: 'Please enter your name.',
+            icon: 'error'
+        });
+        resultContainer.textContent = "Name validation failed.";
+        return;
+    }
+
+    // Simulate account creation success
     Swal.fire({
-        title: 'Incorrect!',
-        text: 'ATDD involves collaboration with more than just developers.',
-        icon: 'error'
+        title: 'Account Created!',
+        text: 'Your account has been successfully created.',
+        icon: 'success'
     });
+    resultContainer.textContent = "Your account has been successfully created.";
 });
 
-document.getElementById("answer2").addEventListener("click", function () {
-    Swal.fire({
-        title: 'Incorrect!',
-        text: 'Testers alone do not write acceptance tests in ATDD.',
-        icon: 'error'
-    });
-});
-
-document.getElementById("answer3").addEventListener("click", function () {
+// Quiz section
+document.getElementById("quiz-answer4").addEventListener("click", function () {
     Swal.fire({
         title: 'Correct!',
-        text: 'ATDD requires collaboration between developers, testers, and stakeholders.',
+        text: 'All fields are mandatory when creating an account.',
         icon: 'success'
+    });
+});
+
+document.getElementById("quiz-answer1").addEventListener("click", function () {
+    Swal.fire({
+        title: 'Incorrect!',
+        text: 'While the password is mandatory, all fields are required.',
+        icon: 'error'
+    });
+});
+
+document.getElementById("quiz-answer2").addEventListener("click", function () {
+    Swal.fire({
+        title: 'Incorrect!',
+        text: 'The name is mandatory, but all fields are required.',
+        icon: 'error'
+    });
+});
+
+document.getElementById("quiz-answer3").addEventListener("click", function () {
+    Swal.fire({
+        title: 'Incorrect!',
+        text: 'The email is mandatory, but all fields are required.',
+        icon: 'error'
     });
 });
 

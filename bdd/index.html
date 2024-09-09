@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavior-Driven Development (BDD)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Fichier de styles global -->
+    <link rel="stylesheet" href="../css/styles-bdd.css"> <!-- Fichier de styles spécifique à BDD -->
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gray-900 shadow-lg">
+    <!-- 3-line Hamburger Menu Button -->
+    <div id="menu-button" class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+    <ul id="navbar-menu" class="navbar-nav ml-auto hidden">
+        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../tdd/index.html">TDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../atdd/index.html">ATDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../bdd/index.html">BDD</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../shiftleft/index.html">Shift Left</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="../mbt/index.html">MBT</a></li>
+    </ul>
+</nav>
+
+<!-- Jumbotron Section -->
+<header class="jumbotron text-center bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 text-white py-12">
+    <h1 class="text-4xl font-bold">Behavior-Driven Development (BDD)</h1>
+    <p class="text-lg mt-4">Write tests in plain language using the Given-When-Then format.</p>
+</header>
+
+<!-- BDD Explanation Section -->
+<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Interactive BDD Example</h2>
+    <p>In this example, you'll create a scenario for a user login system using Given-When-Then.</p>
+
+    <!-- Scenario Input Form -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+        <label for="given" class="block mb-2">Given:</label>
+        <input id="given" type="text" class="p-2 border rounded mb-4 w-full" placeholder="a user is on the login page" />
+
+        <label for="when" class="block mb-2">When:</label>
+        <input id="when" type="text" class="p-2 border rounded mb-4 w-full" placeholder="the user enters correct credentials" />
+
+        <label for="then" class="block mb-2">Then:</label>
+        <input id="then" type="text" class="p-2 border rounded mb-4 w-full" placeholder="the user is logged in" />
+
+        <button id="run-bdd" class="btn bg-indigo-600 text-white px-4 py-2 mt-4">Run Scenario</button>
+
+        <div id="bdd-result" class="mt-4 text-xl font-bold"></div>
+    </div>
+</section>
+
+<!-- Quiz Section -->
+<section class="container mx-auto my-10 p-8 bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-6">Quiz: Test Your Knowledge</h2>
+    <div class="quiz">
+        <p>What does the "Given" step represent in BDD?</p>
+        <button id="quiz-answer1" class="btn bg-blue-500 text-white px-4 py-2 mt-2">An action</button>
+        <button id="quiz-answer2" class="btn bg-blue-500 text-white px-4 py-2 mt-2">A condition</button>
+        <button id="quiz-answer3" class="btn bg-blue-500 text-white px-4 py-2 mt-2">A result</button>
+    </div>
+</section>
+
+<!-- Home Button in Footer -->
+<footer class="text-center py-6">
+    <a href="../index.html" class="btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out">
+        Home
+    </a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="../scripts/bdd.js"></script>
+</body>
+</html>

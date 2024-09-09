@@ -1,8 +1,4 @@
-/* General body styling */
-body {
-    background-color: #f8f9fa;
-    font-family: 'Arial', sans-serif;
-}
+/* ATDD Page Specific Styles */
 
 /* Navbar styling */
 .navbar {
@@ -102,57 +98,25 @@ body {
     border-color: rgba(255, 105, 180, 1);
     border-width: 4px;
 }
-
-/* Red-Green-Refactor Boxes Styling */
-.red-box, .green-box, .refactor-box {
-    padding: 2rem;
-    border-radius: 10px;
+/* Jumbotron z-index ajusté pour passer en arrière-plan */
+.jumbotron {
+    position: relative;
+    z-index: 500;  /* Plus bas que le menu pour ne pas le cacher */
+}
+/* Styling for the Home button in the footer */
+footer a.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4c51bf; /* Indigo */
     color: white;
-    text-align: center;
+    border-radius: 30px;
     font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.red-box {
-    background-color: #e3342f;
-}
-
-.green-box {
-    background-color: #38c172;
-}
-
-.refactor-box {
-    background-color: #ffed4a;
-}
-
-/* Interactive code editor container */
-#editor-container {
-    padding: 2rem;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-#code-editor {
-    height: 200px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #282c34;
-    color: #ffffff;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-/* Result styling */
-#result {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* Quiz button styling */
-.quiz .btn {
-    background-color: #3490dc;
-    color: white;
-}
-
-.quiz .btn:hover {
-    background-color: #1d72b8;
+footer a.btn:hover {
+    background-color: #434190; /* Darker Indigo */
+    transform: scale(1.05); /* Slightly grow on hover */
 }

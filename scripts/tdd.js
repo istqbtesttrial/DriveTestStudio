@@ -36,7 +36,7 @@ let exampleCode =
 // Test case that should fail first (as an example)
 let result = add(2, 2);
 if (result !== 5) {
-    throw new Error('Test failed: 2 + 2 should equal 5');
+    throw new Error('Test failed: 2 + 2 should equal 4');
 }`;
 
 editor.setValue(exampleCode, 1);  // Load the example code into the editor
